@@ -1,0 +1,30 @@
+
+trigger:
+- none
+
+pool:
+  name: my_agent_pool
+parameters:
+  - name: my_name
+    type: string
+    default: name
+
+  - name: age
+    type: string
+    default: name
+
+variables: 
+ greet: 'my_name'
+ age: 'age'
+
+
+stages:
+- stage: one_stage
+  jobs:
+  - job: one_job
+    steps:
+    - script: echo $(greet)
+
+
+
+   
