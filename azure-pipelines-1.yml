@@ -4,25 +4,21 @@ trigger:
 
 pool:
   name: my_agent_pool
-  stages:
-  - stage: stage1
-    jobs:
-    - job: job1
-      steps:
-      - script: echo stage1 job1
-    - job: job2
+
+stages:
+- stage: stage1
+  jobs:
+  - job: job1
+    steps:
+    - script: echo stage1 job1
+  - job: job2
     steps:
     - script: echo stage1 job2
-  - stage: stage2
-    jobs:
-    - job: job1
-      steps:
-      - script: echo stage2 job1
-    - job: job2
+- stage: stage2
+  jobs:
+  - job: job1
+    steps:
+    - script: echo stage2 job1
+  - job: job2
     steps:
     - script: echo stage2 job2
-
-
-
-
-   
