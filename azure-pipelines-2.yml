@@ -13,7 +13,7 @@ stages:
   jobs:
   - job: one_job
     steps:
-    - script: echo Hello "env = ${{ parameters.env}}"
+    - script: echo Hello "${{ parameters.env}}"
 
 
 
