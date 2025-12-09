@@ -27,11 +27,11 @@ stages:
   - job: job1
     steps:
     - script: echo stage2 job1
-    condition: eq(${{ paramete.run_stage_2}} , true)
+    condition: eq(${{ parameters.run_stage_2 }}, true)
   - job: job2
     steps:
     - script: echo stage2 job2
-    condition: eq(${{ paramete.run_stage_2}} , true)
+    condition: eq(${{ parameters.run_stage_2 }}, true)
     
 
 
