@@ -1,6 +1,6 @@
 
 trigger:
-- nano
+- none
 
 pool:
   name: my_agent_pool
