@@ -11,7 +11,7 @@ parameters:
 
   - name: age
     type: string
-    default: name
+    default: 0
 
 variables: 
  greet: 'my_name'
