@@ -1,0 +1,41 @@
+
+trigger:
+- none
+
+pool:
+  name: my_agent_pool
+
+parameters:
+  - name: run_stage_2
+    type: boolean
+    default: true
+    values:
+      - false
+      - true
+ 
+stages:
+- stage: stage1
+  jobs:
+  - job: job1
+    steps:
+    - script: echo stage1 job1
+  - job: job2
+    steps:
+    - script: echo stage1 job2
+- stage: stage2
+  jobs:
+  - job: job1
+    steps:
+    - script: echo stage2 job1
+    condition: eq(${{ paramete.run_stage_2}} , true)
+  - job: job2
+    steps:
+    - script: echo stage2 job2
+    condition: eq(${{ paramete.run_stage_2}} , true)
+    
+
+
+
+
+
+   
